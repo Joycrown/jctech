@@ -11,16 +11,3 @@ def home(request):
    
    
 
-def contact(request):
-    if request.method =="POST":
-        name = request.POST['name']
-        email = request.POST['email']
-        subject = request.POST['subject']
-        message = request.POST['message']
-
-        return render(request, 'home.html')
-
-
-
-    else:
-        return render(request, 'home.html', {})
